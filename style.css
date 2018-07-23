@@ -6,6 +6,12 @@
     --background-navbar: linear-gradient(90deg,#231e53,#10006e);
 }
 
+@media (max-height: 600px) {
+    :root {
+        --navbar-height: 40px;
+  }
+}
+
 *, *::after, *::before {
     box-sizing: inherit;
     padding: 0;
@@ -41,11 +47,7 @@ p {
    /*  box-shadow: 0 2rem .5rem -1rem rgba(0, 0, 0, 0.274); */
     padding-right: .5vw;
 }
-@media (max-height: 600px) {
-    .navbar {
-        height: 40px;
-  }
-}
+
 .navbar__logobox {
     margin-left: 1rem;
     height: calc(100% - 2rem);
@@ -111,6 +113,20 @@ p {
 @media (max-width: 600px) {
     .navbar__link:link,
     .navbar__link:visited {
+        font-size: 18px;
+
+    }
+}
+@media (max-width: 500px) {
+    .navbar__link:link,
+    .navbar__link:visited {
+        font-size: 16px;
+
+    }
+}
+@media (max-width: 430px) {
+    .navbar__link:link,
+    .navbar__link:visited {
         font-size: 14px;
 
     }
@@ -141,7 +157,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: calc(100vh - var(--navbar-height));
     background-image: linear-gradient(to right bottom, rgba(11, 65, 0, 0.5), rgba(158, 255, 2, 0.5)),
     url("./img/header-background.jpg");
     background-size: cover;
@@ -273,6 +289,34 @@ color: rgb(68, 68, 68);
 .btn--white::after {
     background-color: #fff;
 }
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN CONTENT >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.main {
+    color: white;
+}
+.subpage {
+    max-width: 900px;
+    margin: 2rem auto;
+    color: #003300;
+    line-height: 1.5;
+}
+
+.subpage__title {
+    font-size: 4rem;
+    letter-spacing: .8vw;
+    border-bottom: 1px solid #003300;
+}
+
+.subpage__text {
+    font-size:2rem;
+    padding: 3rem;
+    line-height: 1.5;
+}
+
+
+
+
+
 
 
 
