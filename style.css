@@ -86,7 +86,6 @@ p {
 }
 @media (max-width: 350px) {
     .navbar__ul {
-        height: 30px;
         flex-flow: row wrap;
   }
 }
@@ -171,8 +170,9 @@ p {
 .hero__textbox__title{
     font-size: 5vw;
     font-weight: 200;
+    letter-spacing: .8vw;
+    line-height: 1.5;
     animation: toLeft 1s ease-out;
-    padding: 1vh;
 }
 @media (max-width: 800px) {
     .hero__textbox__title {
@@ -189,8 +189,9 @@ p {
 .hero__textbox__subtitle{
     font-size: 2.5vw;
     font-weight: 100;
+    line-height: 1.5;
+    letter-spacing: .3vw;
     animation: toRight 1s ease-out;
-    padding: 1vh;
 }
 @media (max-width: 800px) {
     .hero__textbox__subtitle {
@@ -211,7 +212,8 @@ p {
     text-decoration: none;
     display: inline-block;
     padding: 3vh 3vw;
-    margin-top: 7vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
     transition: all .1s;
     border-radius: 10rem;
     position: relative;
