@@ -180,6 +180,7 @@ p {
     align-items: center;
     height: 100%;
     width: 100%;
+
     animation: showbackground .5s ease-out 2s forwards;
 }
 @media (max-width: 1200px) {
