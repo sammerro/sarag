@@ -35,9 +35,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-p {
-    font-size: 100px;
-}
 
 /* NAVBAR ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
@@ -298,30 +295,46 @@ color: rgb(68, 68, 68);
 .btn--white::after {
     background-color: #fff;
 }
-
+/* //////////////////////////////////////////////////// */
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN CONTENT >>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .main {
-    color: white;
+    color: rgb(233, 233, 233);
+    background-color: orangered;
 }
 .subpage {
-    max-width: 900px;
-    margin: 2rem auto;
-    color: var(--color-green-dark);
+    font-size:2rem;
     line-height: 1.5;
-}
 
+}
+.subpage__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.815);
+    padding: 6rem;
+}
+.subpage__wrapper > *:not(:first-child) {
+/*     border: 1px solid blue; */
+    margin-top: 2rem;
+}
 .subpage__title {
     font-size: 4rem;
+    font-weight: 300;
     letter-spacing: .8vw;
-    border-bottom: 1px solid var(--color-green-dark);
+    border-bottom: 1px solid currentColor;
 }
 
-.subpage__text {
-    font-size:2rem;
-    padding: 3rem;
-    line-height: 1.5;
+.subpage h2 {
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
+.firma {
+    background-image: linear-gradient(to right bottom, rgba(5, 29, 0, 0.5), rgba(157, 255, 0, 0.5)),
+    url(img/koparka.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
 
 
 
