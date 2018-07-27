@@ -7,7 +7,7 @@
     --color-main-gray: #313131;
     --color-gray-light: #383838;
     --color-gray-dark: #000000;
-    --background-navbar: linear-gradient(90deg,#231e53,#10006e);
+    /* --background-navbar: linear-gradient(90deg,#231e53,#10006e); */
     --color-white: rgb(255, 255, 255);
     --color-green-dark: #001f00;
 
@@ -100,14 +100,14 @@ body {
 }
 .navbar__logobox__logo {
     height: 100%;
-    transition: all .1s ease-in;
+    transition: all .1s ease-out;
 }
 .navbar__logobox__logo:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
 
 }
 .navbar__logobox__logo:active {
-    transform: scale(1);
+    transform: scale(1.08);
 
 }
 .navbar__ul {
@@ -129,9 +129,8 @@ body {
 .navbar__link:visited {
     text-align: center;
     display: flex;
-    padding-right: 1vw;
-    margin-right: 1vw;
     height: 100%;
+    padding: 0 1rem;
     color: var(--color-white);
     font-size: 2rem;
     text-decoration: none;
@@ -145,13 +144,13 @@ body {
     .navbar__link:link,
     .navbar__link:visited {
         font-size: 18px;
-
     }
 }
 @media (max-width: 500px) {
     .navbar__link:link,
     .navbar__link:visited {
         font-size: 16px;
+        padding: 0 .5rem;
 
     }
 }
@@ -172,11 +171,12 @@ body {
 
 /* interakcja */
 .navbar__link:hover{
-    transform: scale(1.15);
+/*     transform: scale(1.15); */
+    background-color: rgb(94, 144, 156);
 }
 
 .navbar__link:active{
-  color: var(--color-green-light);
+  color: var(--color-gray-dark);
 
 }
 /*HEADER -------------------------------------------------------------*/
@@ -323,7 +323,6 @@ color: rgb(68, 68, 68);
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN CONTENT >>>>>>>>> */
 .main {
     color: rgb(233, 233, 233);
-    background-color: orangered;
 }
 .subpage {
     font-size:2rem;
@@ -404,7 +403,7 @@ color: rgb(68, 68, 68);
 }
 @media (max-width: 900px) {
     .oferta__subpage {
-        min-height: auto;
+        min-height: fit-content;
   }
 }
 
@@ -527,20 +526,46 @@ color: rgb(206, 206, 206);
 .kontakt__subpage {
     padding: var(--subpage-padding);
     background-image: linear-gradient(to right bottom, rgba(141, 141, 141, 0.356), rgba(0, 84, 105, 0.349)),
-    url("./img/kontakt.jpg");
+    url("./img/kontakt2.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
 }
 
+@media (max-width: 900px) {
+    .kontakt__subpage {
+        min-height: fit-content;
+  }
+}
+
 .kontakt {
     max-width: 900px;
-    height: 100%;
     margin: 0 auto;
     padding: var(--subpage-wrapper-pading);
     background: rgba(0, 0, 0, 0.699);
     font-size: 1.8rem;
 }
+
+
+/* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< foter >>>>>>>>>>>>>>>> */
+
+.footer {
+    padding: 2rem;
+    color: rgb(206, 206, 206);
+    font-size: 1.8rem;
+    
+    background: radial-gradient(rgb(53, 53, 53), rgb(31, 31, 31));
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+
+
+
+
 
 
 /* KEYFRAMES |||||||||||||||||||||||||||||||||||||| */
