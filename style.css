@@ -10,8 +10,17 @@
     --background-navbar: linear-gradient(90deg,#231e53,#10006e);
     --color-white: rgb(255, 255, 255);
     --color-green-dark: #001f00;
-}
 
+    /* layout */
+    --subpage-wrapper-pading: 4rem 6rem;
+    --subpage-padding: 4rem 0;
+}
+@media (max-width: 900px) {
+    :root {
+        --subpage-wrapper-pading: 6rem 4rem;  
+        --subpage-padding: 0 0;      
+  }
+}
 @media (max-height: 600px) {
     :root {
         --navbar-height: 40px;
@@ -29,6 +38,21 @@
 html {
     font-size: 10px;
     box-sizing: border-box;
+}
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+  }
+}
+@media (max-width: 500px) {
+    html {
+        font-size: 7px;
+  }
+}
+@media (max-width: 400px) {
+    html {
+        font-size: 6px;
+  }
 }
 
 body {
@@ -296,7 +320,7 @@ color: rgb(68, 68, 68);
     background-color: #fff;
 }
 /* //////////////////////////////////////////////////// */
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN CONTENT >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN CONTENT >>>>>>>>> */
 .main {
     color: rgb(233, 233, 233);
     background-color: orangered;
@@ -306,16 +330,12 @@ color: rgb(68, 68, 68);
     line-height: 1.5;
 
 }
-.subpage__wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.815);
-    padding: 6rem;
-}
+
 .subpage__wrapper > *:not(:first-child) {
 /*     border: 1px solid blue; */
     margin-top: 2rem;
 }
+
 .subpage__title {
     font-size: 4rem;
     font-weight: 300;
@@ -323,25 +343,182 @@ color: rgb(68, 68, 68);
     border-bottom: 1px solid currentColor;
 }
 
-.subpage h2 {
+.main h2 {
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin: 2rem 0 .5rem 0;
+    font-size: 3rem;
+}
+
+/* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FIRMA >>>>>>>>>>>>>>>> */
+/* strong {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+} */
+
+.firma__subpage {
+     background-image: linear-gradient(to right bottom,
+     rgb(63, 63, 63), rgb(38, 134, 0));
+     padding: var(--subpage-padding);
 }
 
 .firma {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--subpage-wrapper-pading);
+    background: rgba(0, 0, 0, 0.699);
+}
+
+.firma__img {
+    display: block;
+    width: 30%;
+    float: right;
+    margin: 0 6rem 0 2rem
+}
+
+.firma__dane {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.firma__li {
+    list-style-type: circle;
+}
+
+.firma__dane > * {
+    flex: 0 0 50%;
+    }
+
+    /* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< OFERTA >>>>>>>>>>>>>>>> */
+
+.oferta__subpage {
+    padding: 4rem 0;
     background-image: linear-gradient(to right bottom, rgba(5, 29, 0, 0.5), rgba(157, 255, 0, 0.5)),
     url(img/koparka.jpg);
     background-size: cover;
     background-position: center;
-
+    padding: var(--subpage-padding);
+    min-height: 100vh;
+}
+@media (max-width: 900px) {
+    .oferta__subpage {
+        min-height: auto;
+  }
 }
 
+.oferta {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--subpage-wrapper-pading);
+    background: rgba(0, 0, 0, 0.699);
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+.pdfybox {
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+.pdfybox li {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    list-style: none;
+  }
+
+.pdfybox li:before {
+content: '\f15c';
+font-size: 2em;
+font-family: 'FontAwesome';
+float: left;
+margin-left: -1.5em;
+margin-right: 1rem;
+color: rgb(206, 206, 206);
+}
+
+.pdfybox li a:link{
+    color: currentColor;
+    transition: transform .05s ease-in,
+    color .01s ease-out;
+ 
+}
+.pdfybox li a:visited{
+    color: rgb(172, 172, 172);
+    transition: transform .2s ease-in;
+}
+
+.pdfybox li a:hover{
+    color: rgb(78, 173, 0);
+    transform: translateY(-.1rem);
+}
+
+.pdfybox li a:active{
+    color: rgb(43, 95, 0);
+}
+
+.info {
+    margin-top: auto;
+    background: rgb(94, 144, 156);
+    text-align: center;
+    padding: 2rem;
+}
+
+    /* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< AZBEST >>>>>>>>>>>>>>>> */
 
 
+.azbest__subpage {
+    padding: var(--subpage-padding);
+    background-image: linear-gradient(to right bottom,
+    rgb(49, 49, 49), rgb(194, 194, 194));;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
 
+.azbest {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: var(--subpage-wrapper-pading);
+    background: rgba(0, 0, 0, 0.699);
+    font-size: 1.8rem;
+}
 
+.azbest h3 {
+    margin-bottom: -1rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+}
 
+.definicja__azbestu {
+    padding: 4rem;
+    font-style: italic;
+}
 
+/* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Dokumenty >>>>>>>>>>>>>>>> */
+
+.dokumenty__subpage {
+    padding: var(--subpage-padding);
+    background-image: linear-gradient(to right bottom,
+    rgb(61, 61, 61), rgb(0, 84, 105));
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.dokumenty {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: var(--subpage-wrapper-pading);
+    font-size: 1.8rem;
+}
 
 /* KEYFRAMES |||||||||||||||||||||||||||||||||||||| */
 @keyframes toRight{
