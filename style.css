@@ -520,6 +520,29 @@ color: rgb(206, 206, 206);
     font-size: 1.8rem;
 }
 
+
+/* //////////////////////////////////////////////////// */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< KONTAKT >>>>>>>>>>>>>>>> */
+
+.kontakt__subpage {
+    padding: var(--subpage-padding);
+    background-image: linear-gradient(to right bottom, rgba(141, 141, 141, 0.356), rgba(0, 84, 105, 0.349)),
+    url("./img/kontakt.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.kontakt {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: var(--subpage-wrapper-pading);
+    background: rgba(0, 0, 0, 0.699);
+    font-size: 1.8rem;
+}
+
+
 /* KEYFRAMES |||||||||||||||||||||||||||||||||||||| */
 @keyframes toRight{
     0% {
