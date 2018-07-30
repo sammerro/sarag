@@ -470,13 +470,7 @@ color: rgb(68, 68, 68);
     padding: var(--subpage-padding);
     min-height: 100vh;
 }
-@media (max-width: 900px) {
-    .oferta__subpage {
-        min-height: -webkit-fit-content;
-        min-height: -moz-fit-content;
-        min-height: fit-content;
-  }
-}
+
 
 .oferta {
     max-width: 900px;
@@ -493,6 +487,11 @@ color: rgb(68, 68, 68);
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+}
+@media (max-width: 900px) {
+    .oferta {
+        min-height: 100vh;
+  }
 }
 
 .pdfybox {
@@ -633,20 +632,17 @@ color: rgb(206, 206, 206);
     min-height: 100vh;
 }
 
-@media (max-width: 900px) {
-    .kontakt__subpage {
-        min-height: -webkit-fit-content;
-        min-height: -moz-fit-content;
-        min-height: fit-content;
-  }
-}
-
 .kontakt {
     max-width: 900px;
     margin: 0 auto;
     padding: var(--subpage-wrapper-pading);
     background: rgba(0, 0, 0, 0.699);
     font-size: 1.8rem;
+}
+@media (max-width: 900px) {
+    .kontakt {
+        min-height: 100vh;
+  }
 }
 
 
